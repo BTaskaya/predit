@@ -33,7 +33,7 @@ def bpo(match):
 @macro(r"g\/(\w+)\/(\w+)")
 def github(match):
     repo, owner = match.group(1), match.group(2)
-    return f"GH[{repo}/{owner}]({GHUB.format(repo, owner)})"
+    return f"[GH[{repo}/{owner}]]({GHUB.format(repo, owner)})"
 
 def main(files):
     if len(files) == 1 and os.path.isdir(files[0]):
